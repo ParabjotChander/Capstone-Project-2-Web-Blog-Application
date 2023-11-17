@@ -1,0 +1,79 @@
+*{
+  background-color: #141E46;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+h1, h2{
+  text-align: center;
+  color: white;
+}
+
+p{
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+form{
+  display: block;
+}
+
+textarea{
+  resize: none;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+input[type="submit"]{
+  color: white;
+  border-color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 50px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover{
+  background-color: white;
+  color: black;
+}
+
+#create{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  width: 80%;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#show{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#delete_btn{
+  margin-top: 10px;
+}
+
+@media(max-width: 314px){
+  textarea{
+    width: 90%;
+  }
+}

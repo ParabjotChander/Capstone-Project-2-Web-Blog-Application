@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+   <head>
+      
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles/main.css">
+      <title>Web Blog Application</title>
+   
+   </head>
+
+   <body>
+  
+      <h1>Web Blog Application</h1>
+      
+      <div id="create">
+
+         <form action="/submit" method="post">
+
+            <textarea name="message" rows="10" cols="30" placeholder="Enter your blog and submit!" required></textarea>
+            
+            <br>
+            <br>
+            
+            <input type="submit" value="Submit">   
+         
+         </form>
+      
+      </div>
+   
+      <h2>Blogs</h2>
+
+      <div id="show"> 
+        
+         <%if(locals.list){ %>
+
+            <% list.forEach((item) =>{ %>
+               
+               <div id="crud">
+                  
+                  <form action="/edit" method="post">
+               
+                     <textarea name="og_msg" rows="1" cols="30" readonly style="text-align: center;"> <%= item %> </textarea>
+                     
+                     <br> 
+                     <br>
+                     
+                     <textarea name="edit_message" rows="10" cols="30"> <%= item %> </textarea>
+                  
+                     <br>
+                     <br>
+                     
+                     <input type="submit" value="Edit">
+               
+                  </form>
+               
+                  <form action="/delete" method="post">
+               
+                     <textarea name="delete_message" rows="1" cols="30" style="visibility: hidden; display: none;"> <%= item %> </textarea>
+                     
+                     <input type="submit" value="Delete" id="delete_btn">
+               
+                  </form>
+               
+               
+               </div>
+               
+            <%}) %>
+         
+         <%}%>   
+         
+      </div>
+   
+   </body>
+
+</html>
